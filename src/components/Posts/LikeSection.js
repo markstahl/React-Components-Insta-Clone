@@ -1,3 +1,4 @@
+
 // Look at the number of likes on line 26. Right now it's hard coded to '100'.
 // Use a piece of data coming in through props to display the correct number of likes.
 // You will also add an onClick handler that utilizes `likePost` to increase the count of likes.
@@ -16,14 +17,14 @@ const LikeSection = props => {
         className='like-section'
         key='likes-icons-container'
       >
-        <div className='like-section-wrapper'>
+        <div onClick={likePost} className='like-section-wrapper'>
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className='like-number'>100 likes</p>
+  <p className='like-number'>{numberOfLikes}</p>
     </div>
   );
 };
